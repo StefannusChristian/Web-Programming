@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css ">
+    <title>Main Page</title>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="title ">Main Page</div>
+        <hr>
+        <div class="buttons">
+            <div class="user-details ">
+                <div class="button">
+                    <a href="./form_insert.html">
+                        <input type="button" value="Insert">
+                    </a>
+                </div>
+                <div class="button">
+                    <a href="./show_data.php">
+                        <input type="button" value="Show">
+                    </a>
+                </div>
+                <div class="button">
+                    <a href="./form_update.html">
+                        <input type="button" value="Update">
+                    </a>
+                </div>
+                <div class="button">
+                    <a href="./form_delete.html">
+                        <input type="button" value="Delete">
+                    </a>
+                </div>
+                <div class="button">
+                    <form style="height:100%;" action="./add_dummy_data.php" method="post">
+                        <input name="btnSubmit" type="submit" value="Add Dummy Data">
+                    </form>
+                </div>
+                <div class="button">
+                    <form style="height:100%;" action="./clear_data.php" method="post">
+                        <input name="btnSubmit" type="submit" value="Clear">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./all_form.css ">
+    <title>Insert Form</title>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="title ">Form Insert</div>
+        <hr>
+        <form action="./insert_data.php" class="action " method="post">
+            <div class="user-details ">
+                <div class="input-box">
+                    <span class="details ">Judul</span>
+                    <input name="Judul" type="text" placeholder='Masukkan Judul Buku'>
+                </div>
+                <div class="input-box">
+                    <span class="details ">Pengarang</span>
+                    <input name="Pengarang" type="text" placeholder='Masukkan Pengarang Buku'>
+                </div>
+                <div class="input-box">
+                    <span class="details ">Penerbit</span>
+                    <input name="Penerbit" type="text" placeholder='Masukkan Penerbit Buku'>
+                </div>
+                <div class="input-box">
+                    <span class="details ">Tahun Terbit</span>
+                    <input name="Tahun_Terbit" type="text" placeholder='Masukkan Tahun Terbit Buku'>
+                </div>
+            </div>
+            <div class="button">
+                <input name="btnSubmit" type="submit" value="Insert">
+            </div>
+            <div class="button">
+                <a href="./index.html">
+                    <input type="button" value="Back">
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

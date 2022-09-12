@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./all_form.css ">
+    <title>Update Form</title>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="title ">Form Update</div>
+        <hr>
+        <form action="./update_data.php" class="action " method="post">
+            <div class="user-details ">
+                <div class="input-box">
+                    <span class="details ">Judul</span>
+                    <input name="Judul" type="text" placeholder='Judul Buku Yang Ingin Diupdate'>
+                </div>
+                <div class="input-box">
+                    <span class="details ">Judul Baru</span>
+                    <input name="Judul_Baru" type="text" placeholder='Masukkan Judul Buku Baru'>
+                </div>
+                <div class="input-box">
+                    <span class="details ">Pengarang Baru</span>
+                    <input name="Pengarang_Baru" type="text" placeholder='Masukkan Pengarang Buku Baru'>
+                </div>
+                <div class="input-box">
+                    <span class="details ">Penerbit Baru</span>
+                    <input name="Penerbit_Baru" type="text" placeholder='Masukkan Penerbit Buku Baru'>
+                </div>
+                <div class="input-box">
+                    <span class="details ">Tahun Terbit Baru</span>
+                    <input name="Tahun_Terbit_Baru" type="text" placeholder='Tahun Masukkan Terbit Buku Baru'>
+                </div>
+            </div>
+            <div class="button">
+                <input name="btnSubmit" type="submit" value="Update">
+            </div>
+            <div class="button">
+                <a href="./index.html">
+                    <input type="button" value="Back">
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
