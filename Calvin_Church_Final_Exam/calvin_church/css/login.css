@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #3b0d11, #a22627);
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+}
+
+hr {
+    height: 2px;
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, #3b0d11, #a22627);
+    margin-bottom: 20px;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-details .input-box {
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0 12px 0;
+}
+
+.user-details .input-box .details {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:focus {
+    border-color: #9b59b6;
+}
+
+form .button {
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #3b0d11, #a22627);
+}
+
+form .button input:hover {
+    background: linear-gradient(-135deg, #3b0d11, #a22627);
+}
+
+.container .buttons .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.buttons .button {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 0px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.buttons .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #3b0d11, #a22627);
+}
+
+.buttons .button input:hover {
+    background: linear-gradient(135deg, #3b0d11, #a22627);
+}
+
+.user-details {
+    justify-content: center !important;
+}
+
+.input-box {
+    width: 60% !important
+}
+
+.input-box input {
+    text-align: center;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    display: inline-block;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.no-js #preloader,
+.oldie #preloader {
+    display: none;
+}
+
+#loader>div {
+    content: "";
+    background: #ffffff;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+#loader>div:nth-of-type(1) {
+    left: 15px;
+}
+
+#loader>div:nth-of-type(3) {
+    left: -15px;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #121212;
+    z-index: 500;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.no-js #preloader,
+.oldie #preloader {
+    display: none;
+}
+
+
+/* dots jump */
+
+.dots-jump>div {
+    -webkit-animation: dots-jump 1.2s infinite ease;
+    animation: dots-jump 1.2s infinite ease;
+    animation-delay: 0.2s;
+}
+
+.dots-jump>div:nth-of-type(1) {
+    animation-delay: 0.4s;
+}
+
+.dots-jump>div:nth-of-type(3) {
+    animation-delay: 0s;
+}
+
+@-webkit-keyframes dots-jump {
+    0% {
+        top: 0;
+    }
+    40% {
+        top: -6px;
+    }
+    80% {
+        top: 0;
+    }
+}
+
+@keyframes dots-jump {
+    0% {
+        top: 0;
+    }
+    40% {
+        top: -6px;
+    }
+    80% {
+        top: 0;
+    }
+}
+
+
+/* dots fade */
+
+.dots-fade>div {
+    -webkit-animation: dots-fade 1.6s infinite ease;
+    animation: dots-fade 1.6s infinite ease;
+    animation-delay: 0.4s;
+}
+
+.dots-fade>div:nth-of-type(1) {
+    animation-delay: 0.8s;
+}
+
+.dots-fade>div:nth-of-type(3) {
+    animation-delay: 0s;
+}
+
+@-webkit-keyframes dots-fade {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 1;
+    }
+}
+
+@keyframes dots-fade {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 1;
+    }
+}
+
+.no-js #preloader,
+.oldie #preloader {
+    display: none;
+}
+
+
+/* dots pulse */
+
+.dots-pulse>div {
+    -webkit-animation: dots-pulse 1.2s infinite ease;
+    animation: dots-pulse 1.2s infinite ease;
+    animation-delay: 0.2s;
+}
+
+.dots-pulse>div:nth-of-type(1) {
+    animation-delay: 0.4s;
+}
+
+.dots-pulse>div:nth-of-type(3) {
+    animation-delay: 0s;
+}
+
+@-webkit-keyframes dots-pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    40% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.3);
+    }
+    80% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes dots-pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    40% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.3);
+    }
+    80% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+body::-webkit-scrollbar {
+    background: 0 0;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-corner {
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(200, 200, 200, .6);
+    border-radius: 5px;
+}
+
+@media (max-width: 584px) {
+    .container form .user-details {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-height: 200px;
+        overflow-y: scroll;
+        padding-right: 20px;
+    }
+    form .user-details .input-box {
+        width: 100%;
+    }
+    form .user-details::-webkit-scrollbar {
+        background: 0 0;
+        width: 10px;
+    }
+    form .user-details::-webkit-scrollbar-corner {
+        border-radius: 5px;
+    }
+    form .user-details::-webkit-scrollbar-thumb {
+        background: rgba(200, 200, 200, .6);
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,70 @@
+body {
+    background-color:#a22627;
+    background-size: cover;
+    height: 100vh;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1.5px solid black;
+    padding: 8px;
+    text-align: center;
+    min-width: 80px;
+}
+
+tr {
+    background: rgba(211, 211, 211, 0.8);
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+th {
+    color: white;
+    background: #2980b9;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.button {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 0px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.button input {
+    height: 100%;
+    width: 70%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: #a22627;
+}
+
+.button input:hover {
+    background-color:#3b0d11;
+}
