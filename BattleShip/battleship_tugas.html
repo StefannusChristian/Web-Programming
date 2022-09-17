@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship Game</title>
+    <link type="text/css" rel="stylesheet" href="battleship_tugas.css">
+</head>
+
+<body>
+    <section id="leftside">
+        <h1>Battleship Game!</h1>
+        <form id="inputJumlahKapal">
+            <!-- Ukuran Papan -->
+            <input type="text" id="ukuranPapanInput" placeholder="Masukkan Ukuran Papan">
+            <input type="button" id="UkuranPapanInputButton" class="okbutton" value="Ok" onclick="model.get_ukuran_papan_from_user()">
+        </form>
+        <!-- Number of Ships -->
+        <form id="numShipsForm">
+            <label for="numShips">Number of Ships:</label>
+            <select name="numShips" id="numShips" disabled="true">
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+            <option value="9">9</option>
+            <option value="11">11</option>
+            </select>
+            <input type="button" id="NumShipsInputButton" class="okbutton" value="Ok" disabled="true" onclick="model.generateShipsObject()">
+        </form>
+        <!-- Number of Sets -->
+        <form id="numSetsForm">
+            <label for="numSets">Number of Sets:</label>
+            <select name="numSets" id="numSets">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+            </select>
+            <input type="button" id="numSetsInputButton" class="okbutton" value="Ok" disabled="true" onclick="model.makeSets()">
+        </form>
+        <div id="scoreboard">
+            <div class="card">
+                <h4 class="playername">Ukuran Papan</h4>
+                <h4 class="playerScoreHitam" id="ukuran_papan_pilihan">0 x 0</h4>
+            </div>
+            <div class="card">
+                <h4 class="playername">Jumlah Kapal</h4>
+                <h4 class="playerScoreHitam" id="jumlah_kapal_pilihan">0</h4>
+            </div>
+            <div class="card">
+                <h4 class="playername">Jumlah Set</h4>
+                <h4 class="playerScoreHitam" id="jumlah_set_pilihan">0</h4>
+            </div>
+        </div>
+        <h2>Game Rules!</h2>
+        <ol>
+            <li>Program akan memilih siapa yang akan bermain duluan secara acak. Lihat giliran dibagian scoreboard dikanan layar.</li>
+            <li>Permainan ini akan dimainkan secara bergantian.</li>
+            <li>Jika pemain secara tidak sengaja menebak kotak yang tidak ada di papan, maka pemain tersebut diperbolehkan untuk menebak lagi.</li>
+            <li>Jika pemain tersebut secara tidak sengaja menebak kotak yang sudah ditebak, pemain tersebut tidak akan diberi kesempatan untuk menebak lagi.</li>
+            <li>Jika set lebih dari 1, pemenang pada set sebelumnya akan bermain lagi.</li>
+            <li>Jika Ukuran Kapal > 1x1 dan salah satu player sudah berhasil menebak bagian dari kapal tersebut, maka jika player lainnya menebak bagian lainnya dan kapal tersebut tenggelam, player tersebut lah yang akan mendapatkan poin.</li>
+        </ol>
+    </section>
+    <section id="board">
+        <h1 id="alert_message_area"></h1>
+        <table id="papan">
+        </table>
+        <form id="player1form">
+            <h4>Player 1</h4>
+            <input type="text" id="guessInput1" placeholder="A01">
+            <input type="button" id="fireButton1" value="Fire!" onclick="handleFireButton1()" disabled="true">
+        </form>
+        <div id="tombol_continue_main_lagi">
+            <input type="button" id="tombol_continue" value="Continue" disabled="true" onclick="controller.click_continue_button()">
+        </div>
+        <form id="player2form">
+            <h4>Player 2</h4>
+            <input type="text" id="guessInput2" placeholder="A01">
+            <input type="button" id="fireButton2" value="Fire!" onclick="handleFireButton2()" disabled="true">
+        </form>
+    </section>
+    <section id="rightside">
+        <h1 id="game_information">Game Info!</h1>
+        <div id="scoreboard">
+            <div class="card">
+                <h4 class="playername">Set</h4>
+                <h4 class="playerScore" id="set_ke">-</h4>
+            </div>
+            <div class="card">
+                <h4 class="playername" id="player_1_win">0</h4>
+                <h4 class="playerScore" id="player_2_win">0</h4>
+            </div>
+            <div class="card">
+                <h4 class="playername">Giliran</h4>
+                <h4 class="playerScore" id="giliran_siapa">-</h4>
+            </div>
+            <div class="card">
+                <h4 class="playername">Skor Player 1</h4>
+                <h4 class="playerScore" id="skor_p1">-</h4>
+            </div>
+            <div class="card">
+                <h4 class="playername">Skor Player 2</h4>
+                <h4 class="playerScore" id="skor_p2">-</h4>
+            </div>
+            <div class="card">
+                <h4 class="playername">Ships Sunk p1</h4>
+                <h4 class="playerScore" id="shipDestroyedp1">-</h4>
+            </div>
+            <div class="card">
+                <h4 class="playername">Ships Sunk p2</h4>
+                <h4 class="playerScore" id="shipDestroyedp2">-</h4>
+            </div>
+            <div class="card">
+                <h4 class="playername" id="pemenang_set_ke">Pemenang Set </h4>
+                <h4 class="playerScore" id="setWinner">-</h4>
+            </div>
+            <div class="card">
+                <h4 class="playername">Pemenang</h4>
+                <h4 class="playerScore" id="pemenang_akhir">-</h4>
+            </div>
+        </div>
+        <h2 id="info_general">General Information!</h2>
+        <ul>
+            <li>Ukuran Papan 5x5 --> Ukuran Kapal (1x1)</li>
+            <li>Ukuran Papan 7x7 dan 9x9 --> Ukuran Kapal (1x2)</li>
+            <li>Ukuran Papan 11x11 dan 13x13 --> Ukuran Kapal (1x3)</li>
+            <li>Ukuran Papan yang valid adalah n x n dimana n lebih besar dari 4 dan n lebih kecil dari 14 dimana n ganjil </li>
+        </ul>
+        <script src="battleship_tugas.js"></script>
+    </section>
+</body>
+
+</html>

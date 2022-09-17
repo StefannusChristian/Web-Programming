@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1.4fr 4fr 1.4fr;
+    margin: 0px;
+    padding: 0px;
+    background: url('./images/BACKGROUND_IMAGE.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+section#board {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    position: relative;
+    border-spacing: 0px;
+    margin: auto;
+    width: 550px;
+    height: 550px;
+}
+
+td {
+    border: 0.5px solid white;
+    width: 84px;
+    height: auto;
+}
+
+#player1form {
+    position: absolute;
+    bottom: 17px;
+    left: 17px;
+    background-color: #364D71;
+    opacity: 0.9;
+}
+
+#player2form {
+    position: absolute;
+    bottom: 17px;
+    right: 17px;
+    background-color: #364D70;
+    opacity: 0.9;
+}
+
+#player1form,
+#player2form {
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#board h4 {
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 10px;
+    color: #F5F9E9;
+    letter-spacing: 2px;
+}
+
+#board form input {
+    background-color: #F5F9E9;
+    opacity: 0.9;
+    padding: 5px;
+}
+
+.hit {
+    background: url('./images/ship.png') no-repeat center center;
+    height: auto;
+    width: auto;
+}
+
+.miss {
+    background: url('./images/miss.png') no-repeat center center;
+    height: auto;
+    width: auto;
+}
+
+section#leftside {
+    background-color: rgba(152, 207, 113, 0.5);
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+section#rightside {
+    background-color: #1a3e57;
+    padding: 0px 10px;
+    color: white;
+    opacity: 0.9;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+
+#scoreboard {
+    margin: 20px;
+}
+
+.card {
+    display: flex;
+    margin: -5px;
+    margin-top: -20px;
+}
+
+.playername {
+    padding-right: 2rem;
+}
+
+.playerScore {
+    padding-left: 2rem;
+    border-left: 5px solid white;
+    border-radius: 3px;
+}
+
+.playerScoreHitam {
+    padding-left: 2rem;
+    border-left: 5px solid black;
+    border-radius: 3px;
+}
+
+select {
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+form#numShipsForm {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+form#numSetsForm {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+input#ukuranPapanInput {
+    margin-right: 30px;
+    margin-left: 15px;
+    background-color: rgb(248, 224, 222);
+    text-align: center;
+}
+
+#NumShipsInputButton {
+    margin-left: 15px;
+}
+
+#numSetsInputButton {
+    margin-left: 15px;
+}
+
+input,
+select {
+    border-radius: 15px;
+    border: none;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 180px;
+}
+
+div#tombol_continue_main_lagi {
+    margin: auto;
+    display: flex;
+    width: 50%;
+    padding-bottom: 30px;
+    justify-content: space-evenly;
+}
+
+input#tombol_continue {
+    padding: 10px 20px;
+}
+
+#tombol_continue:hover {
+    background-color: #C6ECAE;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 5px solid;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.okbutton {
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.okbutton:hover {
+    background-color: #AEC3B0;
+}
+
+button,
+select {
+    background-color: rgb(248, 224, 222);
+}
+
+.axis {
+    color: white;
+    border: 0px;
+    text-align: center;
+    font-size: 20px;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+label {
+    font-size: 16px;
+}
+
+ol li {
+    padding: 3px 18px;
+    text-align: justify;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+ul li {
+    padding: 3px 18px;
+    text-align: justify;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+#game_information {
+    letter-spacing: 4px;
+}
+
+h1#alert_message_area {
+    display: inline-block;
+    border-bottom: none;
+    background-color: #C1C1C1;
+    opacity: 0.8;
+    width: 600px;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+#ukuranPapanInput:focus,
+#guessInput2:focus,
+#guessInput1:focus {
+    border: none;
+    outline: none;
+}
+
+select:hover {
+    background-color: #F4D35E;
+}
+
+#fireButton1:hover,
+#fireButton2:hover {
+    background-color: #EF233C;
+}
+
+#info_general {
+    border-bottom: 5px solid;
+    padding-bottom: 10px;
+}
