@@ -1,0 +1,259 @@
+.page-content {
+  padding-top: 1rem;
+  padding-bottom: 16rem;
+  background-color: #ffffff;
+}
+
+.page-content .row {
+  max-width: 1080px;
+}
+
+.row {
+  width: 89%;
+  max-width: 1340px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.row .row {
+  width: auto;
+  max-width: none;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.column {
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  padding: 0 20px;
+}
+
+.collapse > .column,
+.column.collapse {
+  padding: 0;
+}
+
+.event-meta {
+  list-style: none;
+  margin-top: 4.8rem;
+  margin-left: 0;
+  border-top: 1px solid #e0e0e0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.7rem;
+  line-height: 3.2rem;
+}
+
+.event-meta li {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.event-meta strong {
+  font-family: "Open Sans", sans-serif;
+  margin-right: 1.2rem;
+  color: #3b0d11;
+}
+
+.event-meta strong::after {
+  content: " :";
+}
+
+.display-1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 1.222;
+  margin-top: 0;
+  margin-bottom: 2.8rem;
+}
+
+.events-list__item-title a {
+  color: #000000;
+  border-bottom: 1px solid transparent;
+}
+
+.events-list__item-title a:hover,
+.events-list__item-title a:focus {
+  color: #3b0d11;
+  border-bottom: 1px solid #3b0d11;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+  width: 1170px;
+  margin: auto;
+}
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(./images/Worship-1.jpg);
+  height: 70vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.nav-area {
+  float: right;
+  list-style: none;
+  margin-top: 30px;
+}
+.nav-area li {
+  display: inline-block;
+}
+.nav-area li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-family: poppins;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.nav-area li a:hover {
+  background: #fff;
+  color: #333;
+}
+.logo {
+  float: left;
+  width: 50px;
+  height: 30px;
+}
+.logo img {
+  width: 100%;
+  padding: 15px 0;
+}
+.welcome-text {
+  position: absolute;
+  width: 1000px;
+  height: 300px;
+  margin: 10% 17%;
+  text-align: center;
+}
+.welcome-text h1 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.welcome-text h1 span {
+  color: #ecb365;
+  font-size: 100px;
+}
+.welcome-text a {
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 20px;
+  display: inline-block;
+  color: #fff;
+}
+.welcome-text a:hover {
+  background: #fff;
+  color: #333;
+}
+/*resposive*/
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+  }
+  .logo {
+    float: none;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+  img {
+    width: auto;
+  }
+  .nav-area {
+    float: none;
+    margin-top: 0;
+  }
+  .nav-area li a {
+    padding: 5px;
+    font-size: 11px;
+  }
+  .nav-area {
+    text-align: center;
+  }
+  .welcome-text {
+    width: 100%;
+    height: auto;
+    margin: 30% 0;
+  }
+  .welcome-text h1 {
+    font-size: 30px;
+  }
+}
+
+/* Copyright */
+.footer {
+  position: absolute;
+  width: 100%;
+  background-color: #bf9270;
+  color: white;
+  text-align: center;
+}
+.copyright {
+  padding: 30px 0;
+  border-top: 1px solid rgba(38, 41, 44, 0.05);
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+table {
+  border-width: 0;
+  width: 100%;
+  max-width: 100%;
+  font-family: "Lora", serif;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 1.5rem 3.2rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  font-size: 26px;
+}
+
+td {
+  font-size: 20px;
+}
+th {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
