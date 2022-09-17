@@ -1,0 +1,347 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+/*Header*/
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    height: 81px;
+    background-color: rgba(22, 23, 22, 0.7);
+    display: flex;
+    justify-content: space-between;
+}
+
+header #nav_logo{
+    height: 100%;
+    width: 180px;
+    overflow: hidden;
+    /*background-color: hotpink;*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 150px;
+    transition: 0.45s ease-in-out;
+}
+
+header #nav_logo img{
+    padding-top: 7px;
+    height: 100%;
+    transform: scale(2.0);
+    object-fit: cover;
+    transition: 0.45s ease-in-out;
+}
+
+header #nav_logo a:hover{
+    content: url("images/hilltone_black-removebg-preview.png");
+    background-color: rgb(255, 228, 181);
+    padding-top: 11px;
+    object-fit: cover;
+    height: 100%;
+    width: 150px;
+    transition: 0.36s ease-in-out;
+}
+
+header #nav_others{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 180px;
+}
+
+header #nav_others span{
+    width: 120px;
+    height: 54px;
+    margin-left: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.27s ease-in-out;
+}
+
+header #nav_others a{
+    text-decoration: none;
+    color: rgb(255, 228, 181);
+}
+
+header #nav_others span:hover{
+    background-color: moccasin;
+    color: rgb(22, 23, 22);
+}
+
+
+
+
+
+/*Footer*/
+footer{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: moccasin;
+    height: 660px;
+    padding-left: 180px;
+    padding-right: 180px;
+    background-color: rgb(22, 23, 22);
+}
+
+footer #footer_title{
+    text-align: center;
+    font-size: 45px;
+    padding-top: 78px;
+    /*background-color: hotpink;*/
+    height: 54px;
+}
+
+footer #content{
+    /*background-color: green;*/
+    height: 528px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/*Send Message*/
+footer #content #send_message{
+    /*background-color: red;*/
+    height: 90%;
+    width: 45%;
+    border-right: 7px solid moccasin;
+    margin-right: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #content #send_message form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+    padding-right: 63px;
+    padding-left: -63px;
+    /*background-color: hotpink;*/
+}
+
+footer #content #send_message form input{
+    height: 22px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 3px;
+    padding: 10px;
+    border-radius: 18px;
+}
+
+footer #content #send_message form textarea{
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    min-height: 90px;
+    resize: vertical;
+    border-radius: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+}
+
+footer #content #send_message form button{
+    display: block;
+    width: 108px;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 27px;
+    transition: 0.45s ease-in-out;
+}
+
+footer #content #send_message form button:hover{
+    width: 136px;
+    height: 45px;
+    border-radius: 54px;
+}
+
+
+
+
+/*Send Contacts & Socials*/
+footer #content #contacts_and_socials{
+    /*background-color: darkred;*/
+    height: 90%;
+    width: 45%;
+    border-left: 7px solid moccasin;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer #content #contacts_and_socials #logo_box{
+    /*background-color: green;*/
+    height: 50%;
+    width: 95%;
+}
+
+footer #content #contacts_and_socials #logo_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content{
+    /*background-color: darkgoldenrod;*/
+    height: 54%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #contacts{
+    /*background-color: blue;*/
+    padding-left: 90px;
+    padding-right: 18px;
+    height: 45%;
+    display: flex;
+    align-items: center;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #contacts #inside #title{
+    padding-bottom: 7px;
+    font-size: 22px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #contacts #inside span{
+    margin-right: 12px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #contacts #inside .contacts{
+    margin-bottom: 4px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #contacts #inside i{
+    width: 10px;
+}
+
+
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials{
+    /*background-color: rebeccapurple;*/
+    padding-left: 90px;
+    padding-right: 18px;
+    height: 45%;
+    display: flex;
+    align-items: center;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside #title{
+    padding-bottom: 7px;
+    font-size: 22px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside #title{
+    padding-bottom: 7px;
+    font-size: 22px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside span{
+    margin-right: 5px;
+    transition: 3s ease-in-out;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside .socials{
+    margin-bottom: 4px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside a{
+    text-decoration: none;
+    color: moccasin;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside a:hover{
+    font-size: 18px;
+}
+
+
+
+
+
+
+.about-section {
+    background: url(./Images/pic.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: rgb(22, 23, 22);
+    overflow: hidden;
+    padding: 50px 50px 50px 0px;
+}
+
+.inner-container {
+    width: 55%;
+    float: right;
+    background-color: rgb(217, 217, 224);
+    padding: 150px;
+}
+
+.inner-container h1 {
+    margin-bottom: 30px;
+    font-size: 70px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 3px;
+}
+
+.text {
+    font-size: 25px;
+    color: black;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+/*@media screen and (max-width:1200px) {
+    .inner-container {
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .about-section {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about-section {
+        padding: 0;
+    }
+    .inner-container {
+        padding: 60px;
+    }
+}*/

@@ -1,0 +1,402 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: white;
+    color: rgb(22, 23, 22);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*Header*/
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    height: 81px;
+    background-color: rgba(22, 23, 22, 0.7);
+    display: flex;
+    justify-content: space-between;
+}
+
+header #nav_logo {
+    height: 100%;
+    width: 180px;
+    overflow: hidden;
+    /*background-color: hotpink;*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 150px;
+    transition: 0.45s ease-in-out;
+}
+
+header #nav_logo img {
+    padding-top: 7px;
+    height: 100%;
+    transform: scale(2.0);
+    object-fit: cover;
+    transition: 0.45s ease-in-out;
+}
+
+header #nav_logo a:hover {
+    content: url("images/hilltone_black-removebg-preview.png");
+    background-color: rgb(255, 228, 181);
+    padding-top: 11px;
+    object-fit: cover;
+    height: 100%;
+    width: 150px;
+    transition: 0.36s ease-in-out;
+}
+
+header #nav_others {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 180px;
+}
+
+header #nav_others span {
+    width: 120px;
+    height: 54px;
+    margin-left: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.27s ease-in-out;
+}
+
+header #nav_others a {
+    text-decoration: none;
+    color: rgb(255, 228, 181);
+}
+
+header #nav_others span:hover {
+    background-color: moccasin;
+    color: rgb(22, 23, 22);
+}
+
+
+/*Section*/
+
+
+/*Cover*/
+
+#section_cover {
+    height: 600px;
+    overflow: hidden;
+}
+
+#section_cover #image_box {
+    width: 100%;
+    height: 100%;
+    background: url("images/cover_music_store.jpg") repeat fixed 100%;
+    object-fit: cover;
+    background-size: 100%;
+    background-position: 50% 125%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#section_cover #image_box #big_title {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 900px;
+    font-family: 'League Gothic', fantasy;
+    font-size: 207px;
+}
+
+#section_cover #image_box #tagline {
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 27px;
+    width: 900px;
+}
+
+
+/*#section_cover #image_box img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 100%;
+}*/
+
+
+/*Main*/
+
+#section_main {
+    /*background-color: darkblue;*/
+    height: 1200px;
+    margin-left: 180px;
+    margin-right: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#section_main #title {
+    /*background-color: pink;*/
+    font-size: 45px;
+    padding-top: 72px;
+    padding-bottom: 18px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#section_main #way_to_stuffs {
+    /*background-color: darkcyan;*/
+    height: 1060px;
+    width: 100%;
+}
+
+#section_main #way_to_stuffs .way {
+    overflow: hidden;
+    display: inline-block;
+    /*background-color: pink;*/
+    width: 290px;
+    height: 320px;
+    margin: 10px;
+    border-radius: 18px;
+    transition: 0.25s ease-in-out;
+}
+
+#section_main #way_to_stuffs .way .image_boxes {
+    width: 100%;
+    height: 70%;
+}
+
+#section_main #way_to_stuffs .way .image_boxes img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#section_main #way_to_stuffs a {
+    text-decoration: none;
+}
+
+#section_main #way_to_stuffs .way:hover {
+    width: 310px;
+    height: 340px;
+    margin: 0px;
+}
+
+#section_main #way_to_stuffs .way .description {
+    width: 100%;
+    height: 30%;
+    color: rgb(22, 23, 22);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    /*background-color: green;*/
+}
+
+#section_main #way_to_stuffs .way .description .title {
+    font-size: 18px;
+    padding-bottom: 2px;
+}
+
+#section_main #way_to_stuffs .way .description .description_inside {
+    margin: 9px;
+    /*background-color: pink;*/
+}
+
+
+/*Footer*/
+
+footer {
+    color: moccasin;
+    height: 660px;
+    padding-left: 180px;
+    padding-right: 180px;
+    background-color: rgb(22, 23, 22);
+}
+
+footer #footer_title {
+    text-align: center;
+    font-size: 45px;
+    padding-top: 78px;
+    /*background-color: hotpink;*/
+    height: 54px;
+}
+
+footer #content {
+    /*background-color: green;*/
+    height: 528px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Send Message*/
+
+footer #content #send_message {
+    /*background-color: red;*/
+    height: 90%;
+    width: 45%;
+    border-right: 7px solid moccasin;
+    margin-right: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #content #send_message form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+    padding-right: 63px;
+    padding-left: -63px;
+    /*background-color: hotpink;*/
+}
+
+footer #content #send_message form input {
+    height: 22px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 3px;
+    padding: 10px;
+    border-radius: 18px;
+}
+
+footer #content #send_message form textarea {
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    min-height: 90px;
+    resize: vertical;
+    border-radius: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+}
+
+footer #content #send_message form button {
+    display: block;
+    width: 108px;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 27px;
+    transition: 0.45s ease-in-out;
+}
+
+footer #content #send_message form button:hover {
+    width: 136px;
+    height: 45px;
+    border-radius: 54px;
+}
+
+
+/*Send Contacts & Socials*/
+
+footer #content #contacts_and_socials {
+    /*background-color: darkred;*/
+    height: 90%;
+    width: 45%;
+    border-left: 7px solid moccasin;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer #content #contacts_and_socials #logo_box {
+    /*background-color: green;*/
+    height: 50%;
+    width: 95%;
+}
+
+footer #content #contacts_and_socials #logo_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content {
+    /*background-color: darkgoldenrod;*/
+    height: 54%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #contacts {
+    /*background-color: blue;*/
+    padding-left: 90px;
+    padding-right: 18px;
+    height: 45%;
+    display: flex;
+    align-items: center;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #contacts #inside #title {
+    padding-bottom: 7px;
+    font-size: 22px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #contacts #inside span {
+    margin-right: 12px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #contacts #inside .contacts {
+    margin-bottom: 4px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #contacts #inside i {
+    width: 10px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials {
+    /*background-color: rebeccapurple;*/
+    padding-left: 90px;
+    padding-right: 18px;
+    height: 45%;
+    display: flex;
+    align-items: center;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside #title {
+    padding-bottom: 7px;
+    font-size: 22px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside #title {
+    padding-bottom: 7px;
+    font-size: 22px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside span {
+    margin-right: 5px;
+    transition: 3s ease-in-out;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside .socials {
+    margin-bottom: 4px;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside a {
+    text-decoration: none;
+    color: moccasin;
+}
+
+footer #content #contacts_and_socials #contacts_and_socials_content #socials #inside a:hover {
+    font-size: 18px;
+}
